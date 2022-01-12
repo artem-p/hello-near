@@ -1,7 +1,7 @@
 use near_sdk::borsh::{self, BorshDeserialize, BorshSerialize};
-use near_sdk::near_bindgen;
+use near_sdk::{env, near_bindgen};
 
-const PUZZLE_NUMBER: u8 = 1
+const PUZZLE_NUMBER: u8 = 1;
 
 #[near_bindgen]
 #[derive(Default, BorshDeserialize, BorshSerialize)]
@@ -26,7 +26,7 @@ impl Contract {
             env::log_str("Try again.")
         }
     }
-
+}
 /*
  * the rest of this file sets up unit tests
  * to run these, the command will be:
